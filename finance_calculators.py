@@ -1,11 +1,12 @@
 import math
 #dispalying the instructions to the user 
+#Displaying instructions for User to choose investment or bond 
 print("Choose either 'investment' or 'bond' from the menu below to proceed: ")
 print('''\ninvestment - to calculate the amount of interest you'll earn on your
       investment''')
 print("bond - to calculate the the amount you'll have to pay on a home loan ")
 
-#Asking the user for selection and storing in variable choice
+#Asking the user for selection and storing in variable choice if they choose investment or bond
 choice = input("Choose either 'investment' or 'bond': ")
 final_choice = choice.lower()
 
@@ -15,8 +16,8 @@ if final_choice == "investment":
     interest_rate = float(input('''Please enter the interest rate,note that only
     the number should be entered, ignore the % '''))
     r = interest_rate / 100
-    years = float(input("Enter the number of years you are investing for "))
-    interest = input("Enter the type of interest, between 'compound' and 'simple'interest: ")
+    years = float(input("Enter the number of years you are investing for "))#variable years to store the number of years they are investing for
+    interest = input("Enter the type of interest, between 'compound' and 'simple'interest: ") 
 
     #conditional statement for the user to choosesimple or compound
     if interest.lower() == "simple":
