@@ -14,18 +14,17 @@ final_choice = choice.lower()
 if final_choice == "investment":
     amount = float(input("\nPlease enter the amount of money you are depositing: "))
     interest_rate = float(input('''Please enter the interest rate,note that only
-    the number should be entered, ignore the % '''))
-    r = interest_rate / 100
+    the number should be entered, ignore the % ''')
     years = float(input("Enter the number of years you are investing for "))#variable years to store the number of years they are investing for
     interest = input("Enter the type of interest, between 'compound' and 'simple'interest: ") 
 
     #conditional statement for the user to choosesimple or compound
     if interest.lower() == "simple":
-        Total_amount = amount*(1+r*years)
+        Total_amount = amount*(1+(interest_rate / 100*years))
         print(f"The total amount is: {Total_amount} ")
             
     elif interest.lower() == "compound":
-        Total_amount =  amount* math.pow((1+r),years)
+        Total_amount =  amount* math.pow(1+(interest_rate / 100)),years)
         print(f"The total amount is: {Total_amount} ")
         
 #conditional statemt to calculate total amount if the user chose bond
